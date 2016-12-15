@@ -4,4 +4,7 @@ module.exports = [{
 }, {
 	name: "french",
 	regex: /^\d([abc]?\+?)?$/gmi
+}, {
+	name: "kurtyki",
+	regex: /^(I{1,3}\+?|IV+?|V[\-\+]?|VI[\-\+]?|VI\.[1-8][\-\+]?)$/gmi
 }];

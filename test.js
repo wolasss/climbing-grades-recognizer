@@ -101,3 +101,55 @@ describe("YDS System", () => {
 		test("5.17d");
 	})
 });
+
+describe("French System", () => {
+	it("should properly recognize valid french grades", () => {
+		const test = gradeOkTester('french');
+		test("3");
+		test("6a");
+		test("5a+");
+		test("5a");
+		test("7a");
+		test("8a+");
+		test("9a+");
+		test("9c+");
+	});
+
+	it("should not recognize not valid french grades", () => {
+		const test = gradeFailTester('french');
+		test("10a+");
+		test("9d+");
+	});
+});
+
+describe("Kurtyki System", () => {
+	it("should properly recognize valid kurtyki grades", () => {
+		const test = gradeOkTester('kurtyki');
+		test("I");
+		test("II");
+		test("II+");
+		test("III+");
+		test("IV");
+		test("V-");
+		test("V");
+		test("V+");
+		test("VI-");
+		test("VI");
+		test("VI+");
+		test("VI.1");
+		test("VI.1+");
+		test("VI.2");
+		test("VI.3");
+		test("VI.4");
+		test("VI.5");
+		test("VI.7+");
+		test("VI.8");
+	});
+
+	it("should not recognize not valid kurtyki grades", () => {
+		const test = gradeFailTester('kurtyki');
+		test("VI.9");
+		test("VI.0");
+		test("II.2");
+	});
+});

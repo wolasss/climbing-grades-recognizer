@@ -1,17 +1,17 @@
 const chai = require('chai');
 const expect = chai.expect;
-const Recogniser = require('./index.js');
+const Recognizer = require('./index.js');
 
 const gradeOkTester = (system) => {
 	return (grade) => {
-		const systems = Recogniser.recognize(grade);
+		const systems = Recognizer.recognize(grade);
 		return expect(systems).to.include(system);
 	};
 };
 
 const gradeFailTester = (system) => {
 	return (grade) => {
-		const systems = Recogniser.recognize(grade);
+		const systems = Recognizer.recognize(grade);
 		return expect(systems).not.to.include(system);
 	};
 };
@@ -19,28 +19,28 @@ const gradeFailTester = (system) => {
 describe("Wrong input", () => {
 	it("should throw an error when provided input is not a string", () => {
 		expect(() => {
-			Recogniser.recognize(6)
+			Recognizer.recognize(6)
 		}).to.throw(Error);
 
 		expect(() => {
-			Recogniser.recognize([6])
+			Recognizer.recognize([6])
 		}).to.throw(Error);
 
 		expect(() => {
-			Recogniser.recognize(null)
+			Recognizer.recognize(null)
 		}).to.throw(Error);
 
 		expect(() => {
-			Recogniser.recognize(undefined)
+			Recognizer.recognize(undefined)
 		}).to.throw(Error);
 	});
 
 	it("should return an empty array when the system is not recognized", () => {
-		expect(Recogniser.recognize("aaa")).to.be.an.Array;
-		expect(Recogniser.recognize("aaa").length).to.be.equal(0);
+		expect(Recognizer.recognize("aaa")).to.be.an.Array;
+		expect(Recognizer.recognize("aaa").length).to.be.equal(0);
 
-		expect(Recogniser.recognize("")).to.be.an.Array;
-		expect(Recogniser.recognize("").length).to.be.equal(0);
+		expect(Recognizer.recognize("")).to.be.an.Array;
+		expect(Recognizer.recognize("").length).to.be.equal(0);
 	});
 });
 

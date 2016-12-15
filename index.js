@@ -1,6 +1,6 @@
 const systems = require('./systems');
 
-class Recogniser {
+class Recognizer {
 	constructor() {
 		this.systems = systems;
 	}
@@ -16,4 +16,4 @@ class Recogniser {
 	}
 }
 
-module.exports = new Recogniser();
+module.exports = new Recognizer();

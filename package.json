@@ -1,15 +1,22 @@
 {
 	"name": "climbing-grade-recognizer",
 	"version": "0.1.0",
-	"description": "",
+	"description": "Module that simply recognises which climbing grade system is provided",
 	"main": "index.js",
 	"scripts": {
 		"test": "mocha test.js"
 	},
 	"author": "Adam Wolski <kontakt@adamwolski.com> (http://adamwolski.com)",
 	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wolasss/climbing-grades-recognizer"
+	},
 	"devDependencies": {
 		"chai": "^3.5.0",
 		"mocha": "^3.2.0"
+	},
+	"engines": {
+		"node": ">=4.2.4"
 	}
 }

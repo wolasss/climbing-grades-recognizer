@@ -9,7 +9,7 @@
 With node:
 
 ```bash
-npm install climbing-grade
+npm install climbing-grade-recognizer
 ```
 
 ## Usage

@@ -28,15 +28,24 @@ Return an array of possible systems or throws an error when provided parameter i
 
 ```javascript
 var GradeRecognizer = require('climbing-grade-recognizer'); 
-GradeRecognizer.recognize('6a'); // ['french']
+GradeRecognizer.recognize('6a'); // ['french', 'font']
 GradeRecognizer.recognize('VI.2'); // ['kurtyki']
 GradeRecognizer.recognize('5.12a'); // ['yds']
+GradeRecognizer.recognize('V12'); // ['hueco']
+GradeRecognizer.recognize('E8'); // ['british']
+GradeRecognizer.recognize('35'); // ['australian']
+GradeRecognizer.recognize('1'); // [ 'french', 'british' ]
 ```
 ### Systems
 
 * 'french'
 * 'yds'
 * 'kurtyki'
+* 'uiaa'
+* 'british'
+* 'australian'
+* 'font'
+* 'hueco'
 
 ## Tests
 

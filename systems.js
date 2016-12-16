@@ -7,4 +7,7 @@ module.exports = [{
 }, {
 	name: "kurtyki",
 	regex: /^(I{1,3}\+?|IV+?|V[\-\+]?|VI[\-\+]?|VI\.[1-8][\-\+]?)$/gmi
+}, {
+	name: "uiaa",
+	regex: /^(I|II\+?|III|IV|V[\-\+]?|VI{1,3}[\-\+]?|IX[\-\+]?|X[\-\+]?|XI\-?)$/gmi
 }];

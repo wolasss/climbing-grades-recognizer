@@ -153,3 +153,36 @@ describe("Kurtyki System", () => {
 		test("II.2");
 	});
 });
+
+describe("UIAA System", () => {
+	it("should properly recognize valid uiaa grades", () => {
+		const test = gradeOkTester('uiaa');
+		test("I");
+		test("II");
+		test("II+");
+		test("III");
+		test("IV");
+		test("V-");
+		test("V");
+		test("V+");
+		test("VI-");
+		test("VI");
+		test("VI+");
+		test("VII");
+		test("VIII");
+		test("VII+");
+		test("IX");
+		test("X");
+		test("X+");
+		test("XI-");
+		test("XI");
+	});
+
+	it("should not recognize not valid uiaa grades", () => {
+		const test = gradeFailTester('uiaa');
+		test("VIIII");
+		test("IIX");
+		test("XII");
+		test("III+");
+	});
+});

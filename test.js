@@ -210,3 +210,41 @@ describe("Australian System", () => {
 		test("40");
 	});
 });
+
+
+
+describe("British System", () => {
+	it("should properly recognize valid british grades", () => {
+		const test = gradeOkTester('british');
+		test("M");
+		test("D");
+		test("VD");
+		test("S");
+		test("HS");
+		test("VS");
+		test("HVS");
+		test("E1");
+		test("E2");
+		test("E3");
+		test("E4");
+		test("E5");
+		test("E10");
+		test("E11");
+		test("1");
+		test("2");
+		test("3");
+		test("4a");
+		test("6b");
+		test("7a");
+		test("7b");
+	});
+
+	it("should not recognize not valid British grades", () => {
+		const test = gradeFailTester('british');
+		test("E0");
+		test("E14");
+		test("8a");
+		test("9a");
+		test("1a");
+	});
+});

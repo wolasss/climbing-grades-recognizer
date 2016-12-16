@@ -13,4 +13,7 @@ module.exports = [{
 }, {
 	name: "australian",
 	regex: /^([1-2][1-9]|3[0-5]|20)$/gmi
+}, {
+	name: "british",
+	regex: /^([1-3]|[4-7][abc]?|[MDS]|VD|[HV]S|HVS|E[1-9]|E10|E11|E12|E13)$/gmi
 }];

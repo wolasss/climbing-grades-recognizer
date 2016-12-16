@@ -211,8 +211,6 @@ describe("Australian System", () => {
 	});
 });
 
-
-
 describe("British System", () => {
 	it("should properly recognize valid british grades", () => {
 		const test = gradeOkTester('british');
@@ -246,5 +244,30 @@ describe("British System", () => {
 		test("8a");
 		test("9a");
 		test("1a");
+	});
+});
+
+
+describe("Hueco Bouldering System", () => {
+	it("should properly recognize valid hueco grades", () => {
+		const test = gradeOkTester('hueco');
+		test("VB");
+		test("V0");
+		test("V0-");
+		test("V0+");
+		test("V1");
+		test("V2");
+		test("V3");
+		test("V10");
+		test("V11");
+		test("V16");
+		test("V17");
+	});
+
+	it("should not recognize not valid hueco grades", () => {
+		const test = gradeFailTester('hueco');
+		test("VA");
+		test("V1+");
+		test("V18");
 	});
 });

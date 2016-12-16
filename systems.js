@@ -16,4 +16,10 @@ module.exports = [{
 }, {
 	name: "british",
 	regex: /^([1-3]|[4-7][abc]?|[MDS]|VD|[HV]S|HVS|E[1-9]|E10|E11|E12|E13)$/gmi
+}, {
+	name: "hueco",
+	regex: /^V(B|0[\-\+]?|[1-9]|1[0-7])$/gmi
+}, {
+	name: "font",
+	regex: /^(3|4[\-\+]?|5[\-\+]?|[6-9][ABC]\+?)$/gmi
 }];

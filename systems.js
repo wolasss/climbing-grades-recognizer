@@ -10,4 +10,7 @@ module.exports = [{
 }, {
 	name: "uiaa",
 	regex: /^(I|II\+?|III|IV|V[\-\+]?|VI{1,3}[\-\+]?|IX[\-\+]?|X[\-\+]?|XI\-?)$/gmi
+}, {
+	name: "australian",
+	regex: /^([1-2][1-9]|3[0-5]|20)$/gmi
 }];

@@ -186,3 +186,27 @@ describe("UIAA System", () => {
 		test("III+");
 	});
 });
+
+
+describe("Australian System", () => {
+	it("should properly recognize valid australian grades", () => {
+		const test = gradeOkTester('australian');
+		test("11");
+		test("12");
+		test("13");
+		test("30");
+		test("20");
+		test("24");
+		test("25");
+		test("35");
+	});
+
+	it("should not recognize not valid Australian grades", () => {
+		const test = gradeFailTester('australian');
+		test("09");
+		test("10");
+		test("36");
+		test("37");
+		test("40");
+	});
+});

@@ -271,3 +271,30 @@ describe("Hueco Bouldering System", () => {
 		test("V18");
 	});
 });
+
+describe("Fontainebleau Bouldering System", () => {
+	it("should properly recognize valid font grades", () => {
+		const test = gradeOkTester('font');
+		test("3");
+		test("4-");
+		test("4");
+		test("4+");
+		test("5");
+		test("5+");
+		test("6A");
+		test("6A+");
+		test("6C");
+		test("7A");
+		test("7B+");
+		test("8B+");
+		test("8C");
+		test("9A");
+	});
+
+	it("should not recognize not valid font grades", () => {
+		const test = gradeFailTester('font');
+		test("5C");
+		test("10A");
+		test("6D");
+	});
+});
